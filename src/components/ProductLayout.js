@@ -38,12 +38,12 @@ export default function ProductLayout({products}){
         {products.map((product, i) => (
           <React.Fragment key={i}>
             <Product product={product}/>
-            {timeForAd(i) && <AdContainer/>}
+            {timeForAd(i) && <AdContainer adNo={Math.floor(Math.random() * 1000)} flag='product'/>}
           </React.Fragment>
           )
         )}
       </Card.Group>
-      {appState.isFetching && <Loading/>}
+      {(appState.isFetching && appState.hasMore) && <Loading/>}
       {!appState.hasMore && <End/>}
       {appState.error && <Oops/>}
     </React.Fragment>

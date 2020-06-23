@@ -51,7 +51,6 @@ function loadDataOnScroll(appState, page, sort) {
 
 function sortData(appState, category) {
   return produce(appState, (draftState) => {
-    console.log("inside sort", category, "appstate", appState);
     draftState.data = fetchData('', category.toLowerCase())
   });
 }

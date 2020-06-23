@@ -1,6 +1,7 @@
-import React, {useContext, useState} from 'react'
-import { Dropdown } from 'semantic-ui-react'
-import GlobalStateContext from "../context/GlobalState";
+import React, { useContext, useState } from 'react';
+import { Dropdown } from 'semantic-ui-react';
+import GlobalStateContext from '../context/GlobalState';
+import styles from './style/index.css';
 
 const sortOptions = [
   {
@@ -17,7 +18,7 @@ const sortOptions = [
     key: 'Id',
     text: 'Id',
     value: 'Id',
-  }
+  },
 ];
 
 const SortInput = () => {
@@ -26,20 +27,22 @@ const SortInput = () => {
   const handleItemClick = (e, name) => {
     appState.actions.sortData(name, appState);
     appState.actions.setCategory(name, appState);
-    setState({key: name, text: name, value: name});
+    setState({ key: name, text: name, value: name });
   };
   return (
-    <span>
-    Sort the catalogue by{' '}
-      <Dropdown
-        inline
-        options={sortOptions}
-        defaultValue={sortOptions[2].value}
-        value={state.value}
-        onChange={(e, {value}) => handleItemClick(e, value)}
-      />
-  </span>
-  )
+    <div>
+      <span>Catalogue Sort: </span>
+      <span className={styles.ml10}>
+        <Dropdown
+          inline
+          options={sortOptions}
+          defaultValue={sortOptions[2].value}
+          value={state.value}
+          onChange={(e, { value }) => handleItemClick(e, value)}
+        />
+      </span>
+    </div>
+  );
 };
 
-export default SortInput
+export default SortInput;

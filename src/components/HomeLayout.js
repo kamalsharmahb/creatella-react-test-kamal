@@ -20,7 +20,9 @@ export default function HomeLayout() {
   useEffect(() => {
     if (!appState.isFetching) return;
     page.current = page.current + 1;
-    appState.hasMore && appState.actions.loadDataOnScroll(page.current, appState.category);
+    if (appState.hasMore) {
+      appState.actions.loadDataOnScroll(page.current, appState.category);
+    }
   }, [appState.isFetching]);
 
   useEffect( ()=>{

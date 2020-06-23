@@ -2,11 +2,11 @@ import React from 'react'
 import {Advertisement} from 'semantic-ui-react';
 import styles from './style/index.css';
 
-export default function AdContainer(){
+export default function AdContainer({adNo}){
   return(
-    <Advertisement unit='large leaderboard' style={{ width: '90%' }}>
+    <Advertisement unit='medium rectangle' style={{ width: '100%' }}>
       <div className={styles.ad}>
-        <img src='https://cdn.flashtalking.com/xre/421/4214881/2812635/image/2812635.gif?63816247' />
+        <img src={`api/ads/?r=${adNo}`} alt="(╯°□°)╯︵ spɐ" />
       </div>
     </Advertisement>
   )

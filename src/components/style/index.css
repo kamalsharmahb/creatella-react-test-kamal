@@ -1,33 +1,37 @@
 .ad {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
 
-.description{
-    text-align: center;
-    padding: 50px 0;
+.ml10 {
+  margin-left: 10px;
 }
 
-.background{
-    background-color: beige;
+.description {
+  text-align: center;
+  padding: 50px 0;
 }
 
-.productLayout{
-    justify-content: center;
+.background {
+  background-color: beige;
 }
 
-.loadingFooter{
-    text-align: center;
+.productLayout {
+  justify-content: center;
 }
 
-.face{
-    text-align: center;
-    height: auto;
-    vertical-align: center;
-    background-color: beige;
-    padding: 40px;
+.loadingFooter {
+  text-align: center;
 }
 
-.oops{
-    text-align: center;
+.face {
+  text-align: center;
+  height: auto;
+  vertical-align: center;
+  background-color: beige;
+  padding: 40px;
+}
+
+.oops {
+  text-align: center;
 }
